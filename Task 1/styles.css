@@ -1,0 +1,70 @@
+:root {
+  --black: #000000;
+  --blue: #3f51b5;
+  --lightblue: #5c6bc0;
+  --gray: #f5f5f5;
+  --lightgray: #bdbdbd;
+  --darkgray: #616161;
+  --orange: #f56400;
+  --pink: #ff00a5;
+  --white: #ffffff;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+header {
+  height: 80px;
+  background-color: var(--blue);
+  font-size: 24px;
+}
+
+header:hover {
+  background-color: var(--lightblue);
+  transition: background-color 500ms;
+}
+
+header > h1 {
+  background-image: linear-gradient(var(--orange), var(--pink));
+  background-clip: text;
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-align: center;
+}
+
+header:hover > h1 {
+  transform: translateX(10px);
+  transition: transform 500ms;
+}
+
+main {
+  height: auto;
+  border: 1px solid var(--lightgray);
+  background-color: var(--gray);
+  color: var(--black);
+  font-size: 16px;
+}
+
+main:hover {
+  color: var(--white);
+  background-color: var(--darkgray);
+  transition: color 500ms;
+  transition: background-color 500ms;
+}
+
+footer {
+  height: 60px;
+  background-color: var(--black);
+  color: var(--lightgray);
+  font-size: 12px;
+  text-align: center;
+}
+
+footer:hover > p {
+  transform: rotate(360deg);
+  transition: transform 500ms;
+}

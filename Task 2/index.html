@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Task 2</title>
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="header">
+      <!-- Dropdown menu for categories -->
+      <div id="category-filter-container">
+        <p>Category:</p>
+        <div>
+          <div id="category-dropdown-button"></div>
+          <!-- Categories are hidden by default and change visibility after clicking button above -->
+          <div id="category-dropdown" class="hide">
+            <!-- Categories are populated from script based on json content -->
+          </div>
+        </div>
+      </div>
+      <div id="sort-filter-container">
+        <p>Sort by Date:</p>
+        <!-- Button for sorting in ascending or descending order, button content change depending on actual order -->
+        <button id="sort-button">Descending</button>
+      </div>
+      <!-- Date range filter -->
+      <div id="date-filter-container">
+        <div>
+          <p>From:</p>
+          <!-- Input for start date -->
+          <input type="date" id="start-date" />
+        </div>
+        <div>
+          <p>To:</p>
+          <!-- Input for end date -->
+          <input type="date" id="end-date" />
+        </div>
+      </div>
+    </div>
+    <div id="blog-posts">
+      <!-- Blog posts are populated from script based on json content and filters applied -->
+    </div>
+    <!-- Error message for invalid/missing json file or too strict filters -->
+    <div id="error-message"></div>
+    <!-- Import script with blog posts loading and filtering -->
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
